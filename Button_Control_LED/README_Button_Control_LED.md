@@ -26,7 +26,6 @@
 |---|---|---|---|
 | LD2 | 板上使用者 LED | PA5 | GPIO_Output |
 | B1 | 板上使用者按鈕 | PC13 | GPIO_Input |
-| B2 | Reset 按鈕 | NRST | 不當作一般 GPIO 使用 |
 
 ---
 
