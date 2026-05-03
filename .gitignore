@@ -1,0 +1,32 @@
+# Local workspace / editor state
+.metadata/
+.codex
+
+# STM32CubeIDE generated build output
+**/Debug/
+**/Release/
+**/build/
+
+# Embedded build artifacts
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+*.o
+*.obj
+*.a
+*.d
+*.su
+*.cyclo
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
