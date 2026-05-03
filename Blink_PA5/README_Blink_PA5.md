@@ -379,39 +379,6 @@ HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 
 ---
 
-## 注意：GPIO_PIN_SET / GPIO_PIN_RESET 才是正確名稱
-
-STM32 HAL 的正確寫法是：
-
-```c
-GPIO_PIN_SET
-GPIO_PIN_RESET
-```
-
-不是：
-
-```c
-GPIO_SET
-GPIO_RESET
-```
-
-因此請使用：
-
-```c
-HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-```
-
-不要寫成：
-
-```c
-HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_SET);
-HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_RESET);
-```
-
-否則可能會編譯失敗。
-
----
 
 ## 完整 LED Blink 範例
 
