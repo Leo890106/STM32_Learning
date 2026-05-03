@@ -1,0 +1,13 @@
+# Keep source files normalized with LF line endings in this repository.
+* text=auto eol=lf
+
+# Binary files
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.elf binary
+*.bin binary
+*.hex binary
