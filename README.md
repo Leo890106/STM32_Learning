@@ -1,6 +1,6 @@
 # STM32 Learning
 
-這個 repository 用來整理 STM32 學習紀錄、範例專案和相關文件。
+這個 repository 用來整理 STM32 學習紀錄、範例專案和相關文件，每個資料夾內都有README說明。
 
 ## 專案列表
 
