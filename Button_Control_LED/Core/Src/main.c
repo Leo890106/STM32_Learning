@@ -97,6 +97,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {/*
+  	  按下亮 放開暗
     if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_SET)
     {
       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);   // LED 亮
@@ -108,6 +109,29 @@ int main(void)
     */
 	  GPIO_PinState current_button_state = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13);
 
+	  /*
+	   當長按時LED燈會不斷亮暗亮暗
+	   if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET){
+			HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+			HAL_Delay(200);
+		}
+	   */
+	  /*
+	   用pooling方式等待下次按下按鈕
+	   if (HAL_GPIO_ReadPin(KEY1_GPIO_Port, KEY1_Pin) == GPIO_PIN_RESET)
+		{
+			HAL_Delay(10);
+
+			if (HAL_GPIO_ReadPin(KEY1_GPIO_Port, KEY1_Pin) == GPIO_PIN_RESET)
+			{
+				HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+
+				while (HAL_GPIO_ReadPin(KEY1_GPIO_Port, KEY1_Pin) == GPIO_PIN_RESET)
+				{
+				}
+			}
+		}
+	   */
 	  if (last_button_state == GPIO_PIN_SET &&
 		  current_button_state == GPIO_PIN_RESET)
 	  {
